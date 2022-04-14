@@ -1,0 +1,40 @@
+#watchBtn,
+#moreInfoBtn {
+  height: 4vh;
+  width: 10vw;
+  position: absolute;
+  bottom: 20%;
+  @include flex (row);
+  gap: 1rem;
+  font-size: 24px;
+  border: none;
+  border-radius: 3px;
+  padding: .5rem 1.5rem;
+  box-sizing: inherit;
+  cursor: pointer;
+
+
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+#watchBtn {
+  left: 5%;
+  background: $whiteBtn;
+
+  img {
+    height: 100%;
+  }
+}
+
+#moreInfoBtn {
+  left: 18%;
+  background: $infoBtn;
+  color: $White_brand;
+
+  img {
+    height: 80%;
+  }
+}

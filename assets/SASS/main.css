@@ -1,0 +1,314 @@
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 100;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Th.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 300;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Lt.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 400;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Rg.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 700;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Md.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 800;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Bd.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Netflix Sans';
+  font-weight: 900;
+  font-display: optional;
+  src: url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff2) format("woff2"), url(https://assets.nflxext.com/ffe/siteui/fonts/netflix-sans/v3/NetflixSans_W_Blk.woff) format("woff");
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    -webkit-transform: translateX(1000px);
+    transform: translateX(1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Netflix Sans', sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background-color: #141414;
+}
+
+main {
+  width: 100%;
+}
+
+#headerMenu {
+  width: 100%;
+  height: 7vh;
+  background-color: #141414;
+  position: fixed;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 60px;
+}
+
+#headerMenu .mapWeb {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 4rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#headerMenu .mapWeb #brandLogo {
+  width: 9.6%;
+}
+
+#headerMenu .mapWeb #menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1.5rem;
+}
+
+#headerMenu .mapWeb #menu ul a {
+  text-decoration: none;
+}
+
+#headerMenu .mapWeb #menu ul a li {
+  font-size: 14px;
+  font-weight: 300;
+  list-style: none;
+  color: #F5F5F1;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+#headerMenu .mapWeb #menu ul a li:hover {
+  color: #aaaaaa;
+}
+
+#headerMenu .accountInfo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+#headerMenu .accountInfo #search {
+  width: 2%;
+}
+
+#headerMenu .accountInfo a {
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 300;
+  color: #F5F5F1;
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+#headerMenu .accountInfo a:hover {
+  color: #aaaaaa;
+}
+
+#headerMenu .accountInfo #notification {
+  width: 3.5%;
+}
+
+#headerMenu .accountInfo #profile {
+  width: 4%;
+  border-radius: 1px;
+}
+
+#headerMenu .accountInfo #arrowAccount {
+  width: 1.5%;
+}
+
+#watchBtn,
+#moreInfoBtn {
+  height: 4vh;
+  width: 10vw;
+  position: absolute;
+  bottom: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+  font-size: 24px;
+  border: none;
+  border-radius: 3px;
+  padding: .5rem 1.5rem;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  cursor: pointer;
+}
+
+#watchBtn:hover,
+#moreInfoBtn:hover {
+  opacity: .7;
+}
+
+#watchBtn {
+  left: 5%;
+  background: white;
+}
+
+#watchBtn img {
+  height: 100%;
+}
+
+#moreInfoBtn {
+  left: 18%;
+  background: #6D6D6EB3;
+  color: #F5F5F1;
+}
+
+#moreInfoBtn img {
+  height: 80%;
+}
+
+#poster {
+  position: relative;
+  height: 90vh;
+}
+
+#poster #titlePoster {
+  color: #F5F5F1;
+  font-size: 80px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 5%;
+  position: absolute;
+}
+
+#poster #posterIMG {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#poster #ageDescription {
+  position: absolute;
+  width: 7%;
+  height: 5%;
+  bottom: 20%;
+  right: 0;
+  background: rgba(48, 48, 48, 0.51);
+  border-left: 3px solid #F5F5F1;
+  border-radius: 2px 2px;
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+#poster #ageDescription #age {
+  height: 100%;
+  margin-left: 10%;
+}
+/*# sourceMappingURL=main.css.map */
