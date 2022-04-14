@@ -7,6 +7,7 @@
   @include flex (row);
   box-sizing: border-box;
   padding: 0 60px;
+  transition: background .6s ease-in-out;
 
   .mapWeb {
     width: 50%;

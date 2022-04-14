@@ -1,4 +1,3 @@
-
 changePoster = () => {
   const moviesPoster = [
     {
@@ -24,13 +23,9 @@ changePoster = () => {
   ];
  
   i = getRandomIntInclusive(0,3)
-  
-
   document.querySelector('#titlePoster').textContent  = moviesPoster[i].name;
   document.querySelector('#posterIMG').src = moviesPoster[i].url;
   document.querySelector('#age').src = moviesPoster[i].age;
-
-
 }
 
 function getRandomIntInclusive (min, max) {
@@ -40,3 +35,14 @@ function getRandomIntInclusive (min, max) {
 }
 
 changePoster()
+
+document.querySelector('#headerMenu').style.background = 'transparent';
+
+window.addEventListener('scroll', () => {
+  let topWindow = window.scrollY;
+  if (topWindow == 0){
+    document.querySelector('#headerMenu').style.background = 'transparent';
+  } else {
+    document.querySelector('#headerMenu').style.background = ''
+  }
+})

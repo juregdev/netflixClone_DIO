@@ -107,6 +107,8 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 60px;
+  -webkit-transition: background .6s ease-in-out;
+  transition: background .6s ease-in-out;
 }
 
 #headerMenu .mapWeb {
