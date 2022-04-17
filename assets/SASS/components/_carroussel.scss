@@ -1,0 +1,125 @@
+.moviesCarrossel {
+  overflow: hidden;
+  margin-top: 1rem;
+  position: relative;
+  top: -12rem;
+
+  #legendAlta {
+    padding-left: 60px;
+    width: 100%;
+    color: $White_brand;
+    font-size: 30px;
+    cursor: pointer;
+
+    &:after {
+      position: relative;
+      right: 4rem;
+      opacity: 0;
+      margin-left: .5rem;
+      font-size: 20px;
+      content: ">";
+      cursor: pointer;
+      transition: right 0.3s 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        right: 0;
+        opacity: 1;
+      }
+    }
+
+
+    #legendSpan {
+
+      &:after {
+        position: relative;
+        right: 1rem;
+        opacity: 0;
+        margin-left: .5rem;
+        font-size: 13px;
+        content: "Ver tudo";
+        cursor: pointer;
+        transition: all 0.3s 0.3s ease-in-out;
+      }
+
+      &:hover {
+        &::after {
+          right: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+    &:hover {
+      #legendSpan {
+        &::after {
+          right: 0;
+          opacity: 1;
+        }
+      }
+    }
+
+  }
+
+  #sectionCard {
+    width: 100%;
+    height: 30%;
+    padding-left: 60px;
+    padding-top: 1rem;
+    position: relative;
+
+
+
+    .arrowLeft,
+    .arrowRight {
+      position: absolute;
+      width: 3.7%;
+      height: 100%;
+      z-index: 1;
+      @include flex (row);
+      border-radius: 5px;
+      cursor: pointer;
+
+
+      img {
+        height: 15%;
+      }
+
+      &:hover {
+        background: $btnCarro
+      }
+    }
+
+    .arrowLeft {
+      left: 0;
+      display: none;
+    }
+
+    .arrowRight {
+      right: 60px;
+    }
+
+
+
+    .carrossel {
+      width: 500%;
+      height: 100%;
+      @include flex (row);
+      justify-content: flex-start;
+      gap: .8rem;
+      transition: all 2s ease-in-out;
+
+      .card {
+        width: 3%;
+        height: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}

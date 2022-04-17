@@ -11,3 +11,16 @@
     opacity: 1;
   }
 }
+
+@keyframes afterCarroussel {
+
+  0% {
+    transform: translateX(-1rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}

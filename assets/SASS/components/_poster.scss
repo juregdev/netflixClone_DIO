@@ -4,7 +4,8 @@
 
   #titlePoster {
     color: $White_brand;
-    font-size: 80px;
+    width: 40%;
+    font-size: 90px;
     top: 50%;
     transform: translateY(-50%);
     left: 5%;
@@ -21,7 +22,7 @@
     position: absolute;
     width: 7%;
     height: 5%;
-    bottom: 20%;
+    bottom: 25%;
     right: 0;
     background: $ageDescription;
     border-left: 3px solid $White_brand;
