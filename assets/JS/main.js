@@ -38,14 +38,16 @@ changePoster()
 
 document.querySelector('#headerMenu').style.background = 'transparent';
 
+
 window.addEventListener('scroll', () => {
   let topWindow = window.scrollY;
-  if (topWindow == 0){
+  if (screen.width>768){
+  if (topWindow == 0 ){
     document.querySelector('#headerMenu').style.background = 'transparent';
   } else {
     document.querySelector('#headerMenu').style.background = ''
   }
-})
+}})
 
 
 const $next = document.querySelector(".arrowRight")

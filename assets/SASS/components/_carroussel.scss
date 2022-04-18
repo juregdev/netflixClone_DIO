@@ -7,12 +7,21 @@
   top: -12rem;
   animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
+  @include Vsm {
+    height: 20vh;
+    margin-top: 5rem;
+  }
+
   #legendAlta {
     padding-left: 60px;
     width: 100%;
     color: $White_brand;
     font-size: 30px;
     cursor: pointer;
+
+    @include Vsm {
+      padding-left: 1rem;
+    }
 
     &:after {
       position: relative;
@@ -72,6 +81,10 @@
     padding-top: 1rem;
     position: relative;
 
+    @include Vsm {
+      padding-left: 1rem;
+    }
+
 
 
     .arrowLeft,
@@ -84,9 +97,19 @@
       border-radius: 5px;
       cursor: pointer;
 
+      @include Vsm {
+        width: 25vw;
+        z-index: 10;
+      }
+
 
       img {
         height: 15%;
+        object-fit: cover;
+
+        @include Vsm {
+          width: 10vw;
+        }
       }
 
       &:hover {
@@ -101,6 +124,10 @@
 
     .arrowRight {
       right: 60px;
+
+      @include Vsm {
+        right: 0;
+      }
     }
 
 
@@ -118,12 +145,17 @@
         width: 3%;
         height: 100%;
 
+        @include Vsm {
+          width: 20%;
+        }
+
         transition: transform 1s ease-in-out;
 
         img {
           height: 100%;
           width: 100%;
           border-radius: 5px;
+          object-fit: cover;
         }
 
         .nameFilm {

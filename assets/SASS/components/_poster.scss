@@ -10,6 +10,11 @@
     transform: translateY(-50%);
     left: 5%;
     position: absolute;
+
+    @include Vsm {
+      font-size: 45px;
+      width: 70%;
+    }
   }
 
   #posterIMG {
@@ -29,6 +34,9 @@
     border-radius: 2px 2px;
     animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
+    @include Vsm {
+      width: 30%
+    }
 
     #age {
       height: 100%;

@@ -127,11 +127,12 @@
 html,
 body {
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
   background-color: #141414;
+  position: relative;
 }
 
 main {
@@ -164,6 +165,47 @@ main {
   transition: background .6s ease-in-out;
 }
 
+#headerMenu .dropMenu {
+  position: fixed;
+  right: 2rem;
+  top: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5rem;
+}
+
+#headerMenu .dropMenu .line1,
+#headerMenu .dropMenu .line2,
+#headerMenu .dropMenu .line3 {
+  width: 10px;
+  height: 10px;
+  background-color: #E54914;
+  border-radius: 100%;
+}
+
+@media (max-width: 576px) {
+  #headerMenu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem;
+    height: 13vh;
+    z-index: 1;
+  }
+}
+
 #headerMenu .mapWeb {
   width: 50%;
   display: -webkit-box;
@@ -185,8 +227,34 @@ main {
           justify-content: flex-start;
 }
 
+@media (max-width: 576px) {
+  #headerMenu .mapWeb {
+    gap: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #headerMenu .mapWeb #brandLogo {
   width: 9.6%;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .mapWeb #brandLogo {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    width: 40vw;
+  }
+}
+
+@media (max-width: 576px) {
+  #headerMenu .mapWeb #menu {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
 }
 
 #headerMenu .mapWeb #menu ul {
@@ -206,6 +274,15 @@ main {
   gap: 1.5rem;
 }
 
+@media (max-width: 576px) {
+  #headerMenu .mapWeb #menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 #headerMenu .mapWeb #menu ul a {
   text-decoration: none;
 }
@@ -217,6 +294,12 @@ main {
   color: #F5F5F1;
   -webkit-transition: color .3s;
   transition: color .3s;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .mapWeb #menu ul a li {
+    font-size: 20px;
+  }
 }
 
 #headerMenu .mapWeb #menu ul a li:hover {
@@ -244,8 +327,29 @@ main {
   gap: 1.5rem;
 }
 
+@media (max-width: 576px) {
+  #headerMenu .accountInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+    -webkit-transform: translateX(150vw);
+            transform: translateX(150vw);
+  }
+}
+
 #headerMenu .accountInfo #search {
   width: 2%;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .accountInfo #search {
+    width: 10vw;
+  }
 }
 
 #headerMenu .accountInfo a {
@@ -261,8 +365,20 @@ main {
   color: #aaaaaa;
 }
 
+@media (max-width: 576px) {
+  #headerMenu .accountInfo a {
+    font-size: 20px;
+  }
+}
+
 #headerMenu .accountInfo #notification {
   width: 3.5%;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .accountInfo #notification {
+    width: 10vw;
+  }
 }
 
 #headerMenu .accountInfo #profile {
@@ -270,16 +386,56 @@ main {
   border-radius: 1px;
 }
 
+@media (max-width: 576px) {
+  #headerMenu .accountInfo #profile {
+    width: 20vw;
+  }
+}
+
 #headerMenu .accountInfo #arrowAccount {
   width: 1.5%;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .accountInfo #arrowAccount {
+    width: 8vw;
+  }
+}
+
+.btnPoster {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 1rem;
+}
+
+@media (max-width: 576px) {
+  .btnPoster {
+    bottom: 22%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 #watchBtn,
 #moreInfoBtn {
   height: 4vh;
   width: 10vw;
-  position: absolute;
-  bottom: 25%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -308,8 +464,15 @@ main {
   opacity: .7;
 }
 
+@media (max-width: 576px) {
+  #watchBtn,
+  #moreInfoBtn {
+    font-size: 16px;
+    width: 40vw;
+  }
+}
+
 #watchBtn {
-  left: 5%;
   background: white;
 }
 
@@ -318,7 +481,6 @@ main {
 }
 
 #moreInfoBtn {
-  left: 18%;
   background: #6D6D6EB3;
   color: #F5F5F1;
 }
@@ -429,6 +591,13 @@ main {
   position: absolute;
 }
 
+@media (max-width: 576px) {
+  #poster #titlePoster {
+    font-size: 45px;
+    width: 70%;
+  }
+}
+
 #poster #posterIMG {
   width: 100%;
   height: 100%;
@@ -449,6 +618,12 @@ main {
           animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@media (max-width: 576px) {
+  #poster #ageDescription {
+    width: 30%;
+  }
+}
+
 #poster #ageDescription #age {
   height: 100%;
   margin-left: 10%;
@@ -464,12 +639,25 @@ main {
           animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+@media (max-width: 576px) {
+  .moviesCarrossel {
+    height: 20vh;
+    margin-top: 5rem;
+  }
+}
+
 .moviesCarrossel #legendAlta {
   padding-left: 60px;
   width: 100%;
   color: #F5F5F1;
   font-size: 30px;
   cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #legendAlta {
+    padding-left: 1rem;
+  }
 }
 
 .moviesCarrossel #legendAlta:after {
@@ -519,6 +707,12 @@ main {
   position: relative;
 }
 
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard {
+    padding-left: 1rem;
+  }
+}
+
 .moviesCarrossel #sectionCard .arrowLeft,
 .moviesCarrossel #sectionCard .arrowRight {
   position: absolute;
@@ -542,9 +736,26 @@ main {
   cursor: pointer;
 }
 
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .arrowLeft,
+  .moviesCarrossel #sectionCard .arrowRight {
+    width: 25vw;
+    z-index: 10;
+  }
+}
+
 .moviesCarrossel #sectionCard .arrowLeft img,
 .moviesCarrossel #sectionCard .arrowRight img {
   height: 15%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .arrowLeft img,
+  .moviesCarrossel #sectionCard .arrowRight img {
+    width: 10vw;
+  }
 }
 
 .moviesCarrossel #sectionCard .arrowLeft:hover,
@@ -559,6 +770,12 @@ main {
 
 .moviesCarrossel #sectionCard .arrowRight {
   right: 60px;
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .arrowRight {
+    right: 0;
+  }
 }
 
 .moviesCarrossel #sectionCard .carrossel {
@@ -595,10 +812,18 @@ main {
   transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .carrossel .card {
+    width: 20%;
+  }
+}
+
 .moviesCarrossel #sectionCard .carrossel .card img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .moviesCarrossel #sectionCard .carrossel .card .nameFilm {

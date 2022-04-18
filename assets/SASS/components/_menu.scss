@@ -9,20 +9,68 @@
   padding: 0 60px;
   transition: background .6s ease-in-out;
 
+  .dropMenu {
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    @include flex (column);
+    gap: .5rem;
+
+    .line1,
+    .line2,
+    .line3 {
+      width: 10px;
+      height: 10px;
+      background-color: $primary_color;
+      border-radius: 100%;
+    }
+  }
+
+
+  @include Vsm {
+    flex-direction: column;
+    padding: 1rem;
+    height: 13vh;
+    z-index: 1;
+
+  }
+
   .mapWeb {
     width: 50%;
     @include flex (row);
     gap: 4rem;
     justify-content: flex-start;
 
+    @include Vsm {
+      gap: 1rem;
+      flex-direction: column;
+    }
+
     #brandLogo {
       width: 9.6%;
+
+      @include Vsm {
+        position: fixed;
+        top: 2rem;
+        left: 2rem;
+        width: 40vw;
+      }
     }
 
     #menu {
+
+      @include Vsm {
+        transform: translateX(100vw)
+      }
+
+
       ul {
         @include flex (row);
         gap: 1.5rem;
+
+        @include Vsm {
+          flex-direction: column
+        }
 
         a {
           text-decoration: none;
@@ -33,6 +81,10 @@
             list-style: none;
             color: $White_brand;
             transition: color .3s;
+
+            @include Vsm {
+              font-size: 20px;
+            }
 
             &:hover {
               color: $hoverMenu;
@@ -50,8 +102,20 @@
     justify-content: flex-end;
     gap: 1.5rem;
 
+    @include Vsm {
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 2rem;
+      transform: translateX(150vw)
+    }
+
+
     #search {
       width: 2%;
+
+      @include Vsm {
+        width: 10vw;
+      }
     }
 
     a {
@@ -65,19 +129,38 @@
       &:hover {
         color: $hoverMenu;
       }
+
+
+      @include Vsm {
+        font-size: 20px;
+      }
     }
 
     #notification {
-      width: 3.5%
+      width: 3.5%;
+
+
+      @include Vsm {
+        width: 10vw;
+      }
     }
 
     #profile {
       width: 4%;
       border-radius: 1px;
+
+      @include Vsm {
+        width: 20vw;
+      }
     }
 
     #arrowAccount {
-      width: 1.5%
+      width: 1.5%;
+
+
+      @include Vsm {
+        width: 8vw;
+      }
     }
   }
 }

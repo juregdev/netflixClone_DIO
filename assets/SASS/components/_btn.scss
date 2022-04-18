@@ -1,9 +1,20 @@
+.btnPoster {
+  position: absolute;
+  bottom: 25%;
+  left: 5%;
+  @include flex (row);
+  gap: 1rem;
+
+  @include Vsm {
+    bottom: 22%;
+    flex-direction: column;
+  }
+}
+
 #watchBtn,
 #moreInfoBtn {
   height: 4vh;
   width: 10vw;
-  position: absolute;
-  bottom: 25%;
   @include flex (row);
   gap: 1rem;
   font-size: 24px;
@@ -18,10 +29,15 @@
   &:hover {
     opacity: .7;
   }
+
+  @include Vsm {
+    font-size: 16px;
+    width: 40vw;
+  }
 }
 
 #watchBtn {
-  left: 5%;
+
   background: $whiteBtn;
 
   img {
@@ -30,7 +46,6 @@
 }
 
 #moreInfoBtn {
-  left: 18%;
   background: $infoBtn;
   color: $White_brand;
 
