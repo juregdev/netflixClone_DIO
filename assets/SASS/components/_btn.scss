@@ -38,3 +38,49 @@
     height: 80%;
   }
 }
+
+.btnCards {
+  width: 100%;
+  @include flex (row);
+  gap: .5rem;
+  justify-content: flex-start;
+  padding-left: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  display: none;
+
+
+  .playCard,
+  .moreBtn {
+    width: 10%;
+    border-radius: 100%;
+
+    img {
+      box-sizing: border-box;
+      @include flex (column);
+      padding: .5rem;
+    }
+  }
+
+  .moreBtn,
+  .likeBtn {
+    border: 1px solid $White_brand;
+    background: transparent;
+  }
+
+  .likeBtn {
+    width: 10%;
+    border-radius: 100%;
+    overflow: hidden;
+
+    div {
+      @include flex (row);
+
+      img {
+        box-sizing: border-box;
+        display: block;
+        padding: .5rem;
+      }
+    }
+  }
+}

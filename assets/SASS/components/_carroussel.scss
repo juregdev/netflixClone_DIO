@@ -2,7 +2,9 @@
   overflow: hidden;
   margin-top: 1rem;
   position: relative;
+  display: none;
   top: -12rem;
+  animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
   #legendAlta {
     padding-left: 60px;
@@ -64,7 +66,7 @@
 
   #sectionCard {
     width: 100%;
-    height: 30%;
+    height: 100%;
     padding-left: 60px;
     padding-top: 1rem;
     position: relative;
@@ -108,16 +110,38 @@
       @include flex (row);
       justify-content: flex-start;
       gap: .8rem;
-      transition: all 2s ease-in-out;
+      transition: all 3s ease-in-out;
 
       .card {
+        position: relative;
         width: 3%;
         height: 100%;
+
+        transition: transform 1s ease-in-out;
 
         img {
           height: 100%;
           width: 100%;
           border-radius: 5px;
+        }
+
+        .nameFilm {
+          font-size: 20px;
+          position: absolute;
+          top: 40%;
+          left: 1rem;
+          color: $White_brand;
+          display: none;
+        }
+
+        &:hover {
+          z-index: 2;
+          transform: scale(1.2);
+
+          .btnCards,
+          .nameFilm {
+            display: flex;
+          }
         }
       }
     }

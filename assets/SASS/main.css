@@ -92,6 +92,32 @@
   }
 }
 
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-50px);
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -300,6 +326,92 @@ main {
   height: 80%;
 }
 
+.btnCards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: .5rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 1rem;
+  position: absolute;
+  bottom: 2rem;
+  display: none;
+}
+
+.btnCards .playCard,
+.btnCards .moreBtn {
+  width: 10%;
+  border-radius: 100%;
+}
+
+.btnCards .playCard img,
+.btnCards .moreBtn img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: .5rem;
+}
+
+.btnCards .moreBtn,
+.btnCards .likeBtn {
+  border: 1px solid #F5F5F1;
+  background: transparent;
+}
+
+.btnCards .likeBtn {
+  width: 10%;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.btnCards .likeBtn div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.btnCards .likeBtn div img {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: .5rem;
+}
+
 #poster {
   position: relative;
   height: 90vh;
@@ -345,7 +457,10 @@ main {
   overflow: hidden;
   margin-top: 1rem;
   position: relative;
+  display: none;
   top: -12rem;
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+          animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .moviesCarrossel #legendAlta {
@@ -397,7 +512,7 @@ main {
 
 .moviesCarrossel #sectionCard {
   width: 100%;
-  height: 30%;
+  height: 100%;
   padding-left: 60px;
   padding-top: 1rem;
   position: relative;
@@ -465,18 +580,45 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: .8rem;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 3s ease-in-out;
+  transition: all 3s ease-in-out;
 }
 
 .moviesCarrossel #sectionCard .carrossel .card {
+  position: relative;
   width: 3%;
   height: 100%;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 .moviesCarrossel #sectionCard .carrossel .card img {
   height: 100%;
   width: 100%;
   border-radius: 5px;
+}
+
+.moviesCarrossel #sectionCard .carrossel .card .nameFilm {
+  font-size: 20px;
+  position: absolute;
+  top: 40%;
+  left: 1rem;
+  color: #F5F5F1;
+  display: none;
+}
+
+.moviesCarrossel #sectionCard .carrossel .card:hover {
+  z-index: 2;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.moviesCarrossel #sectionCard .carrossel .card:hover .btnCards,
+.moviesCarrossel #sectionCard .carrossel .card:hover .nameFilm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
