@@ -148,6 +148,39 @@ $prevAction.addEventListener('click', () => {
   }
 })
 
+const $nextHorror = document.querySelector("#arrowRightHorror")
+const $prevHorror = document.querySelector("#arrowLeftHorror")
+let carrosselHorror = 0
+
+$nextHorror.addEventListener('click', () => {
+  $prevHorror.style.display = 'flex'
+
+  if (carrosselDrama >= 52.5){
+    carrosselDrama=0;
+    $prevHorror.style.display = 'none'
+    $nextHorror.nextElementSibling.nextElementSibling.style.transform = `translateX(-${carrosselDrama}%)`;
+  } else {
+    carrosselDrama+= 17.5
+    $nextHorror.nextElementSibling.nextElementSibling.style.transform = `translateX(-${carrosselDrama}%)`;
+  }
+
+})
+
+$prevHorror.addEventListener('click', () => {
+
+  if (carrosselDrama <= 17.5){
+    carrosselDrama=0;
+    $prevHorror.nextElementSibling.style.transform = `translateX(${carrosselDrama}%)`
+    $prevHorror.style.display = 'none'
+    console.log(true)
+  }
+  else{
+    carrosselDrama-= 17.5
+    $prevHorror.nextElementSibling.style.transform = `translateX(-${carrosselDrama}%)`;
+  
+  }
+})
+
 const apiPull = async () => {
   const API_KEY = '?api_key=abe9ef82fb72277046d8e71df76e2720';
   const BASE_URL = 'https://api.themoviedb.org/3/movie/changes';
@@ -176,11 +209,6 @@ const searchMovie = async (data) => {
   }}
 }
 
-let $element = ''
-let c_rated = 0
-let c_drama = 0
-let c_action = 0
-
 
 
 const card = async (data) => {
@@ -198,7 +226,11 @@ const card = async (data) => {
     document.querySelectorAll('.moviesCarrossel')[2].style.display = 'block'
   }
 
-  if (document.querySelector('#inRated').children.length >= 23 && document.querySelector('#drama').children.length >= 23 && document.querySelector('#action').children.length >= 23) {
+  if(document.querySelector('#horror').children.length >= 23) {
+    document.querySelectorAll('.moviesCarrossel')[3].style.display = 'block'
+  }
+
+  if (document.querySelector('#inRated').children.length >= 23 && document.querySelector('#drama').children.length >= 23 && document.querySelector('#action').children.length >= 23 && document.querySelector('#horror').children.length >= 23) {
      return
   }
 
@@ -211,15 +243,15 @@ const card = async (data) => {
     switch (data.genres[i].name) {
       case 'Action':
         $class = 'action'
-        c_action++
         break;
       case 'Drama': 
         $class = 'drama'
-        c_drama++
+        break;
+      case 'Horror':
+        $class = 'horror'
         break;
       default :
         $class = 'inRated'
-        c_rated++
         break;
     }
   }
