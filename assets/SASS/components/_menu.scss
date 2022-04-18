@@ -7,23 +7,32 @@
   @include flex (row);
   box-sizing: border-box;
   padding: 0 60px;
-  transition: background .6s ease-in-out;
+  transition: background .6s ease-in-out, height .6s ease-in-out;
+
 
   .dropMenu {
     position: fixed;
     right: 2rem;
-    top: 2rem;
+    top: 3.5rem;
     @include flex (column);
     gap: .5rem;
+    cursor: pointer;
+    display: none;
+
+    @include Vsm {
+      display: flex;
+    }
 
     .line1,
     .line2,
     .line3 {
-      width: 10px;
-      height: 10px;
+      width: 7px;
+      height: 7px;
       background-color: $primary_color;
       border-radius: 100%;
     }
+
+
   }
 
 
@@ -58,9 +67,10 @@
     }
 
     #menu {
+      transition: transform .6s ease-in-out;
 
       @include Vsm {
-        transform: translateX(100vw)
+        transform: translateY(-150vw)
       }
 
 
@@ -97,6 +107,7 @@
 
   .accountInfo {
     width: 50%;
+    transition: transform .6s ease-in-out;
 
     @include flex (row);
     justify-content: flex-end;
@@ -106,7 +117,7 @@
       flex-direction: column;
       justify-content: center;
       margin-top: 2rem;
-      transform: translateX(150vw)
+      transform: translateY(-150vh)
     }
 
 

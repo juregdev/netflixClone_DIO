@@ -41,13 +41,13 @@ document.querySelector('#headerMenu').style.background = 'transparent';
 
 window.addEventListener('scroll', () => {
   let topWindow = window.scrollY;
-  if (screen.width>768){
+  
   if (topWindow == 0 ){
     document.querySelector('#headerMenu').style.background = 'transparent';
   } else {
     document.querySelector('#headerMenu').style.background = ''
   }
-}})
+})
 
 
 const $next = document.querySelector(".arrowRight")
@@ -199,7 +199,10 @@ const searchMovie = async (data) => {
   
   for (i in data) {
 
-    if(i > 1000){return} else{
+    if (document.querySelector('#inRated').children.length >= 23 && document.querySelector('#drama').children.length >= 23 && document.querySelector('#action').children.length >= 23 && document.querySelector('#horror').children.length >= 23) {
+      console.log('acabou')
+      return
+   } else {
 
     try{
       let movie = await axios.get(`${BASE_URLMovie}${data[i].id}${API_KEY}`)
@@ -228,7 +231,7 @@ const card = async (data) => {
     document.querySelectorAll('.moviesCarrossel')[2].style.display = 'block'
   }
 
-  if(document.querySelector('#horror').children.length >= 23) {
+  if(document.querySelector('#horror').children.length >= 22) {
     document.querySelectorAll('.moviesCarrossel')[3].style.display = 'block'
   }
 
@@ -289,3 +292,21 @@ const card = async (data) => {
 apiPull()
 
 document.querySelectorAll('.moviesCarrossel')
+
+const $menu = document.querySelector(".dropMenu")
+
+$menu.addEventListener('click', () => {
+
+  if(document.querySelector('#menu').style.transform == 'translateY(0px)' ) {
+
+    if (window.scrollY == 0) {document.querySelector('#headerMenu').style = 'background:transparent;'} else {document.querySelector('#headerMenu').style = ''} 
+    
+    document.querySelector('#menu').style.transform = ''
+    document.querySelector('.accountInfo').style.transform = ''
+
+  } else {
+
+  document.querySelector('#headerMenu').style = 'height:100vh; background:#141414'
+  document.querySelector('#menu').style.transform = 'translateY(0px)'
+  document.querySelector('.accountInfo').style.transform = 'translateY(0px)'}
+})

@@ -161,14 +161,14 @@ main {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 60px;
-  -webkit-transition: background .6s ease-in-out;
-  transition: background .6s ease-in-out;
+  -webkit-transition: background .6s ease-in-out, height .6s ease-in-out;
+  transition: background .6s ease-in-out, height .6s ease-in-out;
 }
 
 #headerMenu .dropMenu {
   position: fixed;
   right: 2rem;
-  top: 2rem;
+  top: 3.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -183,13 +183,23 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: .5rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  #headerMenu .dropMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #headerMenu .dropMenu .line1,
 #headerMenu .dropMenu .line2,
 #headerMenu .dropMenu .line3 {
-  width: 10px;
-  height: 10px;
+  width: 7px;
+  height: 7px;
   background-color: #E54914;
   border-radius: 100%;
 }
@@ -250,10 +260,17 @@ main {
   }
 }
 
+#headerMenu .mapWeb #menu {
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
 @media (max-width: 576px) {
   #headerMenu .mapWeb #menu {
-    -webkit-transform: translateX(100vw);
-            transform: translateX(100vw);
+    -webkit-transform: translateY(-150vw);
+            transform: translateY(-150vw);
   }
 }
 
@@ -308,6 +325,10 @@ main {
 
 #headerMenu .accountInfo {
   width: 50%;
+  -webkit-transition: -webkit-transform .6s ease-in-out;
+  transition: -webkit-transform .6s ease-in-out;
+  transition: transform .6s ease-in-out;
+  transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,8 +358,8 @@ main {
         -ms-flex-pack: center;
             justify-content: center;
     margin-top: 2rem;
-    -webkit-transform: translateX(150vw);
-            transform: translateX(150vw);
+    -webkit-transform: translateY(-150vh);
+            transform: translateY(-150vh);
   }
 }
 
@@ -516,6 +537,7 @@ main {
 
 .btnCards .playCard,
 .btnCards .moreBtn {
+  border: 1px solid #F5F5F1;
   width: 10%;
   border-radius: 100%;
 }
@@ -806,10 +828,10 @@ main {
   position: relative;
   width: 3%;
   height: 100%;
-  -webkit-transition: -webkit-transform 1s ease-in-out;
-  transition: -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  -webkit-transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, width 1s ease-in-out;
+  transition: transform 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 @media (max-width: 576px) {
@@ -839,6 +861,12 @@ main {
   z-index: 2;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .carrossel .card:hover {
+    width: 300vw;
+  }
 }
 
 .moviesCarrossel #sectionCard .carrossel .card:hover .btnCards,

@@ -149,7 +149,8 @@
           width: 20%;
         }
 
-        transition: transform 1s ease-in-out;
+        transition: transform 1s ease-in-out,
+        width 1s ease-in-out;
 
         img {
           height: 100%;
@@ -170,6 +171,10 @@
         &:hover {
           z-index: 2;
           transform: scale(1.2);
+
+          @include Vsm {
+            width: 300vw;
+          }
 
           .btnCards,
           .nameFilm {
