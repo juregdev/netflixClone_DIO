@@ -130,6 +130,7 @@ body {
 }
 
 body {
+  overflow-x: hidden;
   background-color: #141414;
 }
 
@@ -454,8 +455,8 @@ main {
 }
 
 .moviesCarrossel {
-  overflow: hidden;
   margin-top: 1rem;
+  margin-bottom: 2rem;
   position: relative;
   display: none;
   top: -12rem;
