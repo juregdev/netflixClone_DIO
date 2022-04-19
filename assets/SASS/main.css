@@ -550,6 +550,13 @@ main {
   border-radius: 100%;
 }
 
+@media (max-width: 576px) {
+  .btnCards .playCard,
+  .btnCards .moreBtn {
+    width: 18%;
+  }
+}
+
 .btnCards .playCard img,
 .btnCards .moreBtn img {
   -webkit-box-sizing: border-box;
@@ -594,6 +601,12 @@ main {
   width: 10%;
   border-radius: 100%;
   overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .btnCards .likeBtn {
+    width: 18%;
+  }
 }
 
 .btnCards .likeBtn img {

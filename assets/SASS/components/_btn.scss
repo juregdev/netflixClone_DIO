@@ -79,6 +79,9 @@
     width: 10%;
     border-radius: 100%;
 
+    @include Vsm {
+     width: 18%;
+    }
     img {
       box-sizing: border-box;
       @include flex (column);
@@ -105,6 +108,10 @@
     width: 10%;
     border-radius: 100%;
     overflow: hidden;
+
+    @include Vsm {
+     width: 18%;
+    }
 
 
 

@@ -123,3 +123,15 @@ $menu.addEventListener('click', () => {
     document.querySelector('.accountInfo').style.transform = 'translateY(0px)'
   }
 })
+
+document.querySelector('#headerMenu').style.background = 'transparent'
+
+window.addEventListener('scroll', () => {
+  let topWindow = window.scrollY
+
+  if (topWindow == 0) {
+    document.querySelector('#headerMenu').style.background = 'transparent'
+  } else {
+    document.querySelector('#headerMenu').style.background = ''
+  }
+})
