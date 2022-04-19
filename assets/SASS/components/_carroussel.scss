@@ -3,7 +3,7 @@
   margin-top: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  display: none;
+
   top: -12rem;
   animation: slide-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
@@ -11,6 +11,15 @@
     height: 20vh;
     margin-top: 5rem;
   }
+
+  
+  @include sm {
+    margin-top:8rem;
+    }
+
+    @media (max-width:300px) {
+      margin-top: 10rem;
+    }
 
   #legendAlta {
     padding-left: 60px;
@@ -21,6 +30,10 @@
 
     @include Vsm {
       padding-left: 1rem;
+    }
+
+    @include sm {
+    margin-left: 70px;
     }
 
     &:after {
@@ -133,22 +146,38 @@
 
 
     .carrossel {
-      width: 500%;
+      width: 9515px;
       height: 100%;
+      border-right: 2px solid $White_brand;
       @include flex (row);
       justify-content: flex-start;
-      gap: .8rem;
+      gap: 1rem;
       transition: all 3s ease-in-out;
+
+      @include Vsm { gap:.5rem;
+      margin-left: 100px;
+      }
+      @media (max-width:300px) {
+       margin-left: 70px;
+      }
 
       .card {
         position: relative;
-        width: 3%;
-        height: 100%;
+        width: 250px;
+        height: 200px;
 
         @include Vsm {
           width: 20%;
         }
 
+        @include sm {
+          width: 45vw;
+        }
+
+        @media (max-width:300px) {
+          padding-top: 4rem;
+        }
+ 
         transition: transform 1s ease-in-out,
         width 1s ease-in-out;
 
@@ -172,9 +201,6 @@
           z-index: 2;
           transform: scale(1.2);
 
-          @include Vsm {
-            width: 300vw;
-          }
 
           .btnCards,
           .nameFilm {

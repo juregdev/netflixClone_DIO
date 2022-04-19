@@ -44,6 +44,9 @@
 
   }
 
+
+
+
   .mapWeb {
     width: 50%;
     @include flex (row);
@@ -55,15 +58,19 @@
       flex-direction: column;
     }
 
+   
+
     #brandLogo {
       width: 9.6%;
 
       @include Vsm {
         position: fixed;
-        top: 2rem;
+        top: 3rem;
         left: 2rem;
         width: 40vw;
       }
+
+   
     }
 
     #menu {
@@ -80,7 +87,10 @@
 
         @include Vsm {
           flex-direction: column
+         
         }
+
+      
 
         a {
           text-decoration: none;
@@ -95,6 +105,7 @@
             @include Vsm {
               font-size: 20px;
             }
+
 
             &:hover {
               color: $hoverMenu;
@@ -121,12 +132,15 @@
     }
 
 
+
     #search {
       width: 2%;
 
       @include Vsm {
         width: 10vw;
       }
+
+     
     }
 
     a {
@@ -150,10 +164,10 @@
     #notification {
       width: 3.5%;
 
-
       @include Vsm {
         width: 10vw;
       }
+
     }
 
     #profile {
@@ -163,6 +177,8 @@
       @include Vsm {
         width: 20vw;
       }
+
+     
     }
 
     #arrowAccount {
@@ -172,6 +188,7 @@
       @include Vsm {
         width: 8vw;
       }
+
     }
   }
 }

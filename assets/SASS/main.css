@@ -254,7 +254,7 @@ main {
 @media (max-width: 576px) {
   #headerMenu .mapWeb #brandLogo {
     position: fixed;
-    top: 2rem;
+    top: 3rem;
     left: 2rem;
     width: 40vw;
   }
@@ -493,6 +493,14 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  #watchBtn,
+  #moreInfoBtn {
+    font-size: 16px;
+    width: 35vw;
+  }
+}
+
 #watchBtn {
   background: white;
 }
@@ -562,10 +570,24 @@ main {
   padding: .5rem;
 }
 
+@media (max-width: 576px) {
+  .btnCards .playCard img,
+  .btnCards .moreBtn img {
+    padding: .2rem;
+  }
+}
+
 .btnCards .moreBtn,
 .btnCards .likeBtn {
   border: 1px solid #F5F5F1;
   background: transparent;
+  -webkit-transition: background .5s;
+  transition: background .5s;
+}
+
+.btnCards .moreBtn:hover,
+.btnCards .likeBtn:hover {
+  background: #6D6D6EB3;
 }
 
 .btnCards .likeBtn {
@@ -574,27 +596,17 @@ main {
   overflow: hidden;
 }
 
-.btnCards .likeBtn div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.btnCards .likeBtn div img {
+.btnCards .likeBtn img {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
-  padding: .5rem;
+  padding: .3rem;
+}
+
+@media (max-width: 576px) {
+  .btnCards .likeBtn img {
+    padding: .2rem;
+  }
 }
 
 #poster {
@@ -617,6 +629,19 @@ main {
   #poster #titlePoster {
     font-size: 45px;
     width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  #poster #titlePoster {
+    font-size: 60px;
+    top: 40%;
+  }
+}
+
+@media (max-width: 300px) {
+  #poster #titlePoster {
+    font-size: 40px;
   }
 }
 
@@ -646,6 +671,12 @@ main {
   }
 }
 
+@media (max-width: 768px) {
+  #poster #ageDescription {
+    width: 25%;
+  }
+}
+
 #poster #ageDescription #age {
   height: 100%;
   margin-left: 10%;
@@ -655,7 +686,6 @@ main {
   margin-top: 1rem;
   margin-bottom: 2rem;
   position: relative;
-  display: none;
   top: -12rem;
   -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
           animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
@@ -665,6 +695,18 @@ main {
   .moviesCarrossel {
     height: 20vh;
     margin-top: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .moviesCarrossel {
+    margin-top: 8rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .moviesCarrossel {
+    margin-top: 10rem;
   }
 }
 
@@ -679,6 +721,12 @@ main {
 @media (max-width: 576px) {
   .moviesCarrossel #legendAlta {
     padding-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .moviesCarrossel #legendAlta {
+    margin-left: 70px;
   }
 }
 
@@ -801,8 +849,9 @@ main {
 }
 
 .moviesCarrossel #sectionCard .carrossel {
-  width: 500%;
+  width: 9515px;
   height: 100%;
+  border-right: 2px solid #F5F5F1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -819,15 +868,28 @@ main {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: .8rem;
+  gap: 1rem;
   -webkit-transition: all 3s ease-in-out;
   transition: all 3s ease-in-out;
 }
 
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .carrossel {
+    gap: .5rem;
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 300px) {
+  .moviesCarrossel #sectionCard .carrossel {
+    margin-left: 70px;
+  }
+}
+
 .moviesCarrossel #sectionCard .carrossel .card {
   position: relative;
-  width: 3%;
-  height: 100%;
+  width: 250px;
+  height: 200px;
   -webkit-transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
   transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out, width 1s ease-in-out;
@@ -837,6 +899,18 @@ main {
 @media (max-width: 576px) {
   .moviesCarrossel #sectionCard .carrossel .card {
     width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .moviesCarrossel #sectionCard .carrossel .card {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 300px) {
+  .moviesCarrossel #sectionCard .carrossel .card {
+    padding-top: 4rem;
   }
 }
 
@@ -861,12 +935,6 @@ main {
   z-index: 2;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
-}
-
-@media (max-width: 576px) {
-  .moviesCarrossel #sectionCard .carrossel .card:hover {
-    width: 300vw;
-  }
 }
 
 .moviesCarrossel #sectionCard .carrossel .card:hover .btnCards,

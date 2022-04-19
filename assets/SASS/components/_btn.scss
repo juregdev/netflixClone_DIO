@@ -34,6 +34,11 @@
     font-size: 16px;
     width: 40vw;
   }
+
+  @include sm {
+    font-size: 16px;
+    width: 35vw;
+  }
 }
 
 #watchBtn {
@@ -65,6 +70,9 @@
   display: none;
 
 
+
+
+
   .playCard,
   .moreBtn {
     border: 1px solid $White_brand;
@@ -75,6 +83,10 @@
       box-sizing: border-box;
       @include flex (column);
       padding: .5rem;
+
+      @include Vsm {
+        padding: .2rem;
+      }
     }
   }
 
@@ -82,6 +94,11 @@
   .likeBtn {
     border: 1px solid $White_brand;
     background: transparent;
+    transition: background .5s;
+
+    &:hover{
+      background:$infoBtn
+    }
   }
 
   .likeBtn {
@@ -89,14 +106,16 @@
     border-radius: 100%;
     overflow: hidden;
 
-    div {
-      @include flex (row);
+
 
       img {
         box-sizing: border-box;
         display: block;
-        padding: .5rem;
+        padding: .3rem;
+
+        @include Vsm {
+          padding: .2rem;
+        }
       }
     }
   }
-}
