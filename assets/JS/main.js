@@ -98,7 +98,7 @@ $arrowLeft.forEach(arrow => {
 
 const valueWidth = () => {
   if (window.innerWidth < 1100) {
-    return (window.innerWidth - 24) / 2
+    return window.innerWidth / 3
   } else {
     return document.querySelector('.carrossel').scrollWidth / 5 - 60
   }

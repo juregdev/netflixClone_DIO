@@ -724,12 +724,6 @@ main {
   }
 }
 
-@media (max-width: 768px) {
-  .moviesCarrossel #legendAlta {
-    margin-left: 70px;
-  }
-}
-
 .moviesCarrossel #legendAlta:after {
   position: relative;
   right: 4rem;
@@ -876,13 +870,6 @@ main {
 @media (max-width: 576px) {
   .moviesCarrossel #sectionCard .carrossel {
     gap: .5rem;
-    margin-left: 100px;
-  }
-}
-
-@media (max-width: 300px) {
-  .moviesCarrossel #sectionCard .carrossel {
-    margin-left: 70px;
   }
 }
 
@@ -898,13 +885,7 @@ main {
 
 @media (max-width: 576px) {
   .moviesCarrossel #sectionCard .carrossel .card {
-    width: 20%;
-  }
-}
-
-@media (max-width: 768px) {
-  .moviesCarrossel #sectionCard .carrossel .card {
-    width: 45vw;
+    width: 125px;
   }
 }
 
