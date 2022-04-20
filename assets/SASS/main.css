@@ -610,14 +610,14 @@ main {
           justify-content: flex-start;
   padding-left: 1rem;
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   display: none;
 }
 
 .btnCards .playCard,
 .btnCards .moreBtn {
   border: 1px solid #F5F5F1;
-  width: 2vw;
+  width: 1.5vw;
   border-radius: 100%;
 }
 
@@ -677,7 +677,7 @@ main {
 }
 
 .btnCards .likeBtn {
-  width: 2vw;
+  width: 1.5vw;
   border-radius: 100%;
   overflow: hidden;
 }
@@ -976,8 +976,8 @@ main {
 }
 
 .moviesCarrossel #sectionCard .carrossel .card {
-  height: 200px;
-  width: 400px;
+  height: 150px;
+  width: 450px;
   -webkit-transition: width 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
   transition: width 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
   transition: transform 1s ease-in-out, width 1s ease-in-out, width 1s ease-in-out;
@@ -997,8 +997,7 @@ main {
 }
 
 .moviesCarrossel #sectionCard .carrossel .card #imgCard {
-  height: 200px;
-  width: 400px;
+  width: 100%;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1015,7 +1014,7 @@ main {
 .moviesCarrossel #sectionCard .carrossel .card .nameFilm {
   font-size: 20px;
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 1rem;
   color: #F5F5F1;
   display: none;

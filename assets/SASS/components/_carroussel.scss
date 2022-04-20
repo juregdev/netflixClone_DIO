@@ -156,8 +156,8 @@
       }
     
       .card {
-        height: 200px;
-        width: 400px;
+        height: 150px;
+        width: 450px;
 
         @include Vsm {
          
@@ -174,8 +174,8 @@
         width 1s ease-in-out, width 1s ease-in-out;
 
         #imgCard {
-          height: 200px;
-          width: 400px;
+         
+          width: 100%;
           border-radius: 5px;
           object-fit: cover;
           transition:  width 1s ease-in-out;
@@ -190,7 +190,7 @@
         .nameFilm {
           font-size: 20px;
           position: absolute;
-          top: 40%;
+          top: 30%;
           left: 1rem;
           color: $White_brand;
           display: none;
