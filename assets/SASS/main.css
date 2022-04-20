@@ -949,8 +949,10 @@ main {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 1rem;
-  -webkit-transition: all 3s ease-in-out;
-  transition: all 3s ease-in-out;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  -webkit-transition: all .8s ease-in-out;
+  transition: all .8s ease-in-out;
 }
 
 @media (max-width: 576px) {
