@@ -617,19 +617,27 @@ main {
 .btnCards .playCard,
 .btnCards .moreBtn {
   border: 1px solid #F5F5F1;
-  width: 10%;
+  width: 2vw;
   border-radius: 100%;
+}
+
+@media (max-width: 1200px) {
+  .btnCards .playCard,
+  .btnCards .moreBtn {
+    width: 3vw;
+  }
 }
 
 @media (max-width: 576px) {
   .btnCards .playCard,
   .btnCards .moreBtn {
-    width: 18%;
+    width: 5vw;
   }
 }
 
 .btnCards .playCard img,
 .btnCards .moreBtn img {
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
@@ -669,18 +677,25 @@ main {
 }
 
 .btnCards .likeBtn {
-  width: 10%;
+  width: 2vw;
   border-radius: 100%;
   overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+  .btnCards .likeBtn {
+    width: 3vw;
+  }
+}
+
 @media (max-width: 576px) {
   .btnCards .likeBtn {
-    width: 18%;
+    width: 5vw;
   }
 }
 
 .btnCards .likeBtn img {
+  width: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: block;
@@ -931,7 +946,6 @@ main {
 .moviesCarrossel #sectionCard .carrossel {
   width: 9515px;
   height: 100%;
-  border-right: 2px solid #F5F5F1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -962,13 +976,12 @@ main {
 }
 
 .moviesCarrossel #sectionCard .carrossel .card {
-  position: relative;
-  width: 250px;
   height: 200px;
-  -webkit-transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  transition: width 1s ease-in-out, -webkit-transform 1s ease-in-out;
-  transition: transform 1s ease-in-out, width 1s ease-in-out;
-  transition: transform 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  width: 400px;
+  -webkit-transition: width 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: width 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, width 1s ease-in-out, width 1s ease-in-out;
+  transition: transform 1s ease-in-out, width 1s ease-in-out, width 1s ease-in-out, -webkit-transform 1s ease-in-out;
 }
 
 @media (max-width: 576px) {
@@ -983,12 +996,20 @@ main {
   }
 }
 
-.moviesCarrossel #sectionCard .carrossel .card img {
-  height: 100%;
-  width: 100%;
+.moviesCarrossel #sectionCard .carrossel .card #imgCard {
+  height: 200px;
+  width: 400px;
   border-radius: 5px;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .carrossel .card #imgCard {
+    width: 125px;
+  }
 }
 
 .moviesCarrossel #sectionCard .carrossel .card .nameFilm {
@@ -1004,6 +1025,15 @@ main {
   z-index: 2;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+  .moviesCarrossel #sectionCard .carrossel .card:hover {
+    width: 50vw;
+  }
+  .moviesCarrossel #sectionCard .carrossel .card:hover #imgCard {
+    width: 50vw;
+  }
 }
 
 .moviesCarrossel #sectionCard .carrossel .card:hover .btnCards,

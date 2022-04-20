@@ -100,7 +100,7 @@ const valueWidth = () => {
   if (window.innerWidth < 1100) {
     return window.innerWidth / 3
   } else {
-    return document.querySelector('.carrossel').scrollWidth / 5 - 60
+    return window.innerWidth - 60
   }
 }
 
@@ -169,7 +169,7 @@ const createElement = (data, genre) => {
     console.log(data)
     document.querySelector(`#${genre}`).innerHTML += ` 
     <div class="card">
-      <img src="${urlimg}" alt="Backdrop ${data.title}" />
+      <img id='imgCard'src="${urlimg}" alt="Backdrop ${data.title}" />
       <h1 class="nameFilm">${data.title}</h1>
       <div class="btnCards">
         <button class="playCard"><img src="./assets/IMG/play.png" alt=""></button>

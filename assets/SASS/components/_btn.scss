@@ -88,13 +88,18 @@
   .playCard,
   .moreBtn {
     border: 1px solid $White_brand;
-    width: 10%;
+    width: 2vw;
     border-radius: 100%;
 
+    @include xl {
+      width: 3vw;
+     }
+
     @include Vsm {
-     width: 18%;
+     width: 5vw;
     }
     img {
+      width: 100%;
       box-sizing: border-box;
       @include flex (column);
       padding: .5rem;
@@ -117,17 +122,21 @@
   }
 
   .likeBtn {
-    width: 10%;
+    width: 2vw;
     border-radius: 100%;
     overflow: hidden;
 
+    @include xl {
+      width: 3vw;
+     }
     @include Vsm {
-     width: 18%;
+     width: 5vw;
     }
 
 
 
       img {
+        width: 100%;
         box-sizing: border-box;
         display: block;
         padding: .3rem;

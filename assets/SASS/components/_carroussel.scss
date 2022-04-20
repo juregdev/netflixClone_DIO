@@ -145,7 +145,6 @@
     .carrossel {
       width: 9515px;
       height: 100%;
-      border-right: 2px solid $White_brand;
       @include flex (row);
       justify-content: flex-start;
       gap: 1rem;
@@ -157,9 +156,8 @@
       }
     
       .card {
-        position: relative;
-        width: 250px;
         height: 200px;
+        width: 400px;
 
         @include Vsm {
          
@@ -173,13 +171,20 @@
         }
  
         transition: transform 1s ease-in-out,
-        width 1s ease-in-out;
+        width 1s ease-in-out, width 1s ease-in-out;
 
-        img {
-          height: 100%;
-          width: 100%;
+        #imgCard {
+          height: 200px;
+          width: 400px;
           border-radius: 5px;
           object-fit: cover;
+          transition:  width 1s ease-in-out;
+
+          @include Vsm {
+         
+            width: 125px;
+          }
+  
         }
 
         .nameFilm {
@@ -194,6 +199,15 @@
         &:hover {
           z-index: 2;
           transform: scale(1.2);
+          @include Vsm {
+            width: 50vw;
+
+            #imgCard{
+              width:50vw
+            }
+          }
+
+
 
 
           .btnCards,
