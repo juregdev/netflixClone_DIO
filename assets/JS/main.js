@@ -135,3 +135,56 @@ window.addEventListener('scroll', () => {
     document.querySelector('#headerMenu').style.background = ''
   }
 })
+
+const apiRequest = async page => {
+  const urlInRanted = `https://api.themoviedb.org/3/discover/movie?api_key=abe9ef82fb72277046d8e71df76e2720&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_watch_monetization_types=flatrate`
+
+  const urlAction = `https://api.themoviedb.org/3/discover/movie?api_key=abe9ef82fb72277046d8e71df76e2720&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=28&with_watch_monetization_types=flatrate`
+
+  const urlDrama = `https://api.themoviedb.org/3/discover/movie?api_key=abe9ef82fb72277046d8e71df76e2720&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=18&with_watch_monetization_types=flatrate`
+
+  const urlHorror = `https://api.themoviedb.org/3/discover/movie?api_key=abe9ef82fb72277046d8e71df76e2720&language=pt-BR&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=27&with_watch_monetization_types=flatrate`
+
+  try {
+    let inRanted = await axios.get(urlInRanted)
+    let action = await axios.get(urlAction)
+    let drama = await axios.get(urlDrama)
+    let horror = await axios.get(urlHorror)
+
+    console.log(inRanted.data)
+    console.log(action.data)
+    console.log(drama.data)
+    console.log(horror.data)
+
+    createElement(inRanted.data.results, 'inRated')
+    createElement(action.data.results, 'action')
+    createElement(drama.data.results, 'drama')
+    createElement(horror.data.results, 'horror')
+  } catch (e) {}
+}
+
+const createElement = (data, genre) => {
+  data.forEach(data => {
+    let urlimg = `https://image.tmdb.org/t/p/w500${data.backdrop_path}`
+    console.log(data)
+    document.querySelector(`#${genre}`).innerHTML += ` 
+    <div class="card">
+      <img src="${urlimg}" alt="Backdrop ${data.title}" />
+      <h1 class="nameFilm">${data.title}</h1>
+      <div class="btnCards">
+        <button class="playCard"><img src="./assets/IMG/play.png" alt=""></button>
+        <button class="moreBtn"><img src="./assets/IMG/morebtn.png" alt=""></button>
+        <button class="likeBtn"><img src="./assets/IMG/like.png" alt=""></button>
+      </div>
+    </div>`
+  })
+  setTimeout(
+    () =>
+      (document.querySelector(`#${genre}`).parentNode.parentNode.style.display =
+        'block'),
+    100
+  )
+}
+
+apiRequest(getRandomIntInclusive(1, 100))
+setTimeout(apiRequest(getRandomIntInclusive(4, 100)), 1000)
