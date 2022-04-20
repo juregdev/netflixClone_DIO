@@ -204,6 +204,12 @@ main {
   border-radius: 100%;
 }
 
+@media (max-width: 992px) {
+  #headerMenu {
+    padding: 2rem;
+  }
+}
+
 @media (max-width: 576px) {
   #headerMenu {
     -webkit-box-orient: vertical;
@@ -237,6 +243,12 @@ main {
           justify-content: flex-start;
 }
 
+@media (max-width: 992px) {
+  #headerMenu .mapWeb {
+    gap: .5rem;
+  }
+}
+
 @media (max-width: 576px) {
   #headerMenu .mapWeb {
     gap: 1rem;
@@ -249,6 +261,12 @@ main {
 
 #headerMenu .mapWeb #brandLogo {
   width: 9.6%;
+}
+
+@media (max-width: 992px) {
+  #headerMenu .mapWeb #brandLogo {
+    width: 20%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -348,6 +366,12 @@ main {
   gap: 1.5rem;
 }
 
+@media (max-width: 992px) {
+  #headerMenu .accountInfo {
+    gap: .7rem;
+  }
+}
+
 @media (max-width: 576px) {
   #headerMenu .accountInfo {
     -webkit-box-orient: vertical;
@@ -365,6 +389,18 @@ main {
 
 #headerMenu .accountInfo #search {
   width: 2%;
+}
+
+@media (max-width: 1200px) {
+  #headerMenu .accountInfo #search {
+    width: 4%;
+  }
+}
+
+@media (max-width: 992px) {
+  #headerMenu .accountInfo #search {
+    width: 6%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -396,6 +432,12 @@ main {
   width: 3.5%;
 }
 
+@media (max-width: 992px) {
+  #headerMenu .accountInfo #notification {
+    width: 7%;
+  }
+}
+
 @media (max-width: 576px) {
   #headerMenu .accountInfo #notification {
     width: 10vw;
@@ -407,6 +449,12 @@ main {
   border-radius: 1px;
 }
 
+@media (max-width: 992px) {
+  #headerMenu .accountInfo #profile {
+    width: 10%;
+  }
+}
+
 @media (max-width: 576px) {
   #headerMenu .accountInfo #profile {
     width: 20vw;
@@ -415,6 +463,12 @@ main {
 
 #headerMenu .accountInfo #arrowAccount {
   width: 1.5%;
+}
+
+@media (max-width: 992px) {
+  #headerMenu .accountInfo #arrowAccount {
+    width: 7%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -443,13 +497,18 @@ main {
   gap: 1rem;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
   .btnPoster {
-    bottom: 22%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .btnPoster {
+    bottom: 22%;
   }
 }
 
@@ -485,10 +544,23 @@ main {
   opacity: .7;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1500px) {
   #watchBtn,
   #moreInfoBtn {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  #watchBtn,
+  #moreInfoBtn {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 576px) {
+  #watchBtn,
+  #moreInfoBtn {
     width: 40vw;
   }
 }
@@ -496,7 +568,6 @@ main {
 @media (max-width: 768px) {
   #watchBtn,
   #moreInfoBtn {
-    font-size: 16px;
     width: 35vw;
   }
 }
@@ -678,15 +749,16 @@ main {
           animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 1500px) {
   #poster #ageDescription {
-    width: 30%;
+    width: 20%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   #poster #ageDescription {
-    width: 25%;
+    width: 30%;
+    height: 10%;
   }
 }
 

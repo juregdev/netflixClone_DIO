@@ -5,9 +5,13 @@
   @include flex (row);
   gap: 1rem;
 
+  @include lg {
+    flex-direction: column;
+  }
+
   @include Vsm {
     bottom: 22%;
-    flex-direction: column;
+    
   }
 }
 
@@ -30,13 +34,21 @@
     opacity: .7;
   }
 
-  @include Vsm {
+  @include Vxl {
     font-size: 16px;
+  }
+
+  @include lg {
+    width:30vw;
+  }
+
+  @include Vsm {
+   
     width: 40vw;
   }
 
   @include sm {
-    font-size: 16px;
+ 
     width: 35vw;
   }
 }

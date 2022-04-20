@@ -36,6 +36,10 @@
   }
 
 
+  @include lg {
+    padding:2rem;
+  }
+
   @include Vsm {
     flex-direction: column;
     padding: 1rem;
@@ -53,6 +57,10 @@
     gap: 4rem;
     justify-content: flex-start;
 
+    @include lg {
+      gap:.5rem
+    }
+
     @include Vsm {
       gap: 1rem;
       flex-direction: column;
@@ -62,6 +70,10 @@
 
     #brandLogo {
       width: 9.6%;
+
+      @include lg {
+        width: 20%;
+      }
 
       @include Vsm {
         position: fixed;
@@ -124,6 +136,10 @@
     justify-content: flex-end;
     gap: 1.5rem;
 
+    @include lg {
+      gap:.7rem;
+    }
+
     @include Vsm {
       flex-direction: column;
       justify-content: center;
@@ -135,6 +151,14 @@
 
     #search {
       width: 2%;
+
+      @include xl {
+        width: 4%;
+      }
+
+      @include lg {
+        width: 6%;
+      }
 
       @include Vsm {
         width: 10vw;
@@ -155,6 +179,7 @@
         color: $hoverMenu;
       }
 
+    
 
       @include Vsm {
         font-size: 20px;
@@ -163,6 +188,10 @@
 
     #notification {
       width: 3.5%;
+      
+      @include lg {
+        width: 7%;
+      }
 
       @include Vsm {
         width: 10vw;
@@ -174,6 +203,10 @@
       width: 4%;
       border-radius: 1px;
 
+      @include lg {
+        width: 10%;
+      }
+
       @include Vsm {
         width: 20vw;
       }
@@ -184,6 +217,9 @@
     #arrowAccount {
       width: 1.5%;
 
+      @include lg {
+        width: 7%;
+      }
 
       @include Vsm {
         width: 8vw;
