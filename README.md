@@ -1,7 +1,7 @@
 # Clone Netflix - Digital Innovation One Challenge
 [![License](https://img.shields.io/github/license/filipebarrosg/netflixClone_DIO)](https://github.com/Filipebarrosg/netflixClone_DIO/blob/main/LICENSE)
 
-Desafio proposto pela Digital Innovation One de reprodução do Layout da Netflix como parte do Bootcampo Html Developer
+Desafio proposto pela Digital Innovation One de reprodução do Layout da Netflix como parte do Bootcamp Html Developer
 
 [![Pages](https://img.shields.io/website-up-down-green-red/http/monip.org.svg)](https://filipebarrosg.github.io/netflixClone_DIO/)
 
